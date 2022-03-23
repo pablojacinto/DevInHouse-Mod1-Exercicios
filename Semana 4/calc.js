@@ -2,9 +2,8 @@ function calculadora() {
    let n1 = parseFloat(prompt('Digite o primeiro número'));
    let n2 = parseFloat(prompt('Digite o segundo número'));
    let expressao = prompt('Digite a expressão');
-   let resultado;
-
-   function calculadora(n1, n2, expressao) {
+   let resultado = (n1, n2, expressao) => {
+      //posso fazer com função anônima na sintaxe - "function (n1, n2, exp) {}"
       switch (expressao) {
          case '+':
             resultado = n1 + n2;
@@ -28,12 +27,8 @@ function calculadora() {
       }
 
       return resultado;
-   }
-
-   //chamando a função
-   calculadora();
-
-   alert(resultado);
+   };
+   alert(resultado(n1, n2, expressao));
 }
 
 // outro teste
