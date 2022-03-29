@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Conta bancária</title>
+      <link rel="stylesheet" href="style.css" />
+   </head>
+   <body>
+      <div class="contas">
+         <div class="conta">Saldo da conta 1</div>
+
+         <div class="conta">Saldo da conta 2</div>
+         <div class="conta">Saldo da conta 3</div>
+         <div class="saldo">R$ <span id="saldo1"></span></div>
+         <div class="saldo">R$ <span id="saldo2"></span></div>
+         <div class="saldo">R$ <span id="saldo3"></span></div>
+      </div>
+
+      <div
+         class="escolhadeconta"
+         style="
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+         "
+      >
+         <h2 style="text-align: center; margin-top: 35px">
+            Escolha a conta para a operação
+         </h2>
+
+         <input
+            id="iddaconta"
+            type="number"
+            style="width: 100px; flex-grow: 0; flex-shrink: 1; flex-basis: 20px"
+            placeholder="1, 2, ou 3"
+         />
+      </div>
+
+      <h2>Escolha apenas uma operação e informe o valor</h2>
+      <div
+         style="text-align: center; margin-top: 35px"
+         class="operacao"
+         style="display: flex"
+      >
+         <div class="operacoes">
+            <h2>Depósito</h2>
+            <input type="number" name="" id="valordeposito" placeholder="R$" />
+            <h2>Saque</h2>
+            <input type="number" name="" id="valordesaque" placeholder="R$" />
+            <br />
+         </div>
+         <div class="botao" style="margin-top: 35px">
+            <button onclick="operacao()">Realizar operação</button>
+         </div>
+      </div>
+
+      <script src="ex10.js"></script>
+   </body>
+</html>
