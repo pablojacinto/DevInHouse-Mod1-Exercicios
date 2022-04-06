@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Exercícios da semana 6</title>
+   </head>
+   <body>
+      <h1 id="tituloNovo">Título da Página</h1>
+
+      <br />
+      <h2>Selecione um novo título para a página</h2>
+      <input type="text" id="novoTitulo" placeholder="Novo Título" />
+      <button onclick="alteraTitulo()">Alterar Título</button>
+      <hr style="margin-top: 20px" />
+      <h2>Exercício 2: Calculadora</h2>
+      <div>
+         <div class="input1"><input id="n1" type="number" /></div>
+         <div class="operator">
+            <select name="operacao" id="operacao" form="carform">
+               <option value="+">+</option>
+               <option value="-">-</option>
+               <option value="/">/</option>
+               <option value="*">*</option>
+            </select>
+         </div>
+         <div class="input2"><input id="n2" type="number" /></div>
+      </div>
+
+      <button onclick="calcular()">Calcular</button>
+      <h3>Resultado</h3>
+      <div id="result"></div>
+      <script src="script.js"></script>
+   </body>
+</html>

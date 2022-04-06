@@ -1,0 +1,122 @@
+* {
+   box-sizing: border-box;
+}
+
+body {
+   margin: 0;
+}
+
+h1 {
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
+   font-size: 20px;
+   color: brown;
+   text-align: center;
+   background-image: url('img/dog.png');
+   background-repeat: repeat;
+   background-size: contain;
+}
+
+body {
+   background-color: antiquewhite;
+}
+
+p {
+   font-size: 14px;
+}
+
+.avancar {
+   border-radius: 5%;
+   border: 1px solid red;
+   padding: 10px;
+}
+
+/* .teste {
+   width: 200px;
+   height: 200px;
+
+   background-image: url('img/dog.png');
+} */
+
+.coluna {
+   width: 200px;
+   height: auto;
+}
+
+.imagem {
+   width: 100%;
+   height: 100%;
+}
+
+.pai {
+   display: flex;
+}
+
+.logo {
+   width: 120px;
+   height: 80px;
+}
+
+.logo img {
+   width: 100%;
+   height: 100%;
+}
+
+.menu {
+   list-style-type: none;
+   display: flex;
+   margin: 0;
+}
+
+.item {
+   padding: 20px 20px 25px 20px;
+   display: flex;
+
+   /* PERGUNTAR SE TEM UM JEITO DE CONSIDERAR O tamaho da letra  */
+   margin: 0;
+
+   /* o item não está tomando toda a altura do menu. o jeito mais fácil de fazer isso é ir testando o padding ou tem como deixar automático? */
+
+   height: 50px;
+}
+
+.item a {
+   justify-content: center;
+   align-items: center;
+}
+
+.item:hover {
+   background-color: rgb(132, 7, 148);
+   transition: 300ms;
+}
+
+header {
+   height: 80px;
+   width: 100%;
+   background-color: blueviolet;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   position: fixed;
+   top: 0;
+   overflow: hidden;
+
+   /* FICOU FIXO, MAS DEIXOU DE OCUPAR A EXTENSÃO TODA DA TELA */
+}
+
+footer {
+   width: 100%;
+   height: 40px;
+   background-color: blueviolet;
+
+   bottom: 0;
+}
+
+main {
+   margin-top: 100px;
+   margin-bottom: 50px;
+}
+
+.titulo {
+   background: rgb(199, 115, 37);
+   line-height: 20px;
+}
