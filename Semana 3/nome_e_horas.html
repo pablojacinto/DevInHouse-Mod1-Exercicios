@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+   <body>
+      <h3>Informe seu nome</h3>
+
+      <input type="text" id="informanome" value="" />
+
+      <button onclick="myName()">Informar nome</button> <br />
+
+      <input type="text" id="informasobrenome" value="" />
+
+      <button onclick="myLastName()">Informar sobrenome</button>
+
+      <p>Seu nome é: <span id="nome"></span></p>
+
+      <p>Seu sobrenome é: <span id="sobrenome"></span></p>
+
+      <p>Seu nome possui <span id="contagemNome">_</span> letras</p>
+
+      <hr />
+      <h2>Clique no botão para alertar as horas</h2>
+
+      <button onclick="hora()">Que hora é essa?</button>
+
+      <script>
+         function myName() {
+            var x = document.getElementById('informanome').value;
+            document.getElementById('nome').innerHTML = x;
+
+            document.getElementById('contagemNome').innerHTML = x.length;
+         }
+
+         function myLastName() {
+            var y = document.getElementById('informasobrenome').value;
+            document.getElementById('sobrenome').innerHTML = y.toUpperCase();
+         }
+
+         function hora() {
+            d = new Date();
+            a = d.getHours();
+            b = d.getMinutes();
+            // alert(a);
+
+            alert('Agora são ' + a + ' horas e ' + b + ' minutos');
+         }
+      </script>
+   </body>
+</html>

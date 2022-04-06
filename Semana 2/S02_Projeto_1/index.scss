@@ -1,0 +1,261 @@
+$cor1: #2a0944;
+$cor2: #3c185f;
+$cor3: #a12568;
+$cor4: #fec260;
+$cor5: #3c185f17;
+
+// configurações iniciais
+
+* {
+   box-sizing: border-box;
+   margin: 0;
+}
+
+body {
+   background-color: $cor5;
+}
+
+main {
+   margin-left: auto;
+   margin-right: auto;
+   width: 75vw;
+}
+
+// cabeçalho
+
+header {
+   height: 100px;
+   background: $cor1;
+   display: flex;
+   justify-content: space-between;
+   box-shadow: 0px 1px 10px darkgray;
+}
+
+.login {
+   color: $cor4;
+   text-align: right;
+   font-size: 1.2em;
+}
+
+.elemento2 {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   margin-right: 10px;
+}
+
+.campobusca {
+   width: 20em;
+   height: 2em;
+   border: 1.3px solid $cor4;
+   //    isso vai virar mixing, da borda
+}
+
+.botao {
+   height: 2em;
+   border: 1.3px solid $cor4;
+
+   &:hover {
+      background-color: $cor4;
+      //    nada que coloco tem funcionado aqui. o botão também perdeu a característica do "active". como resolver?
+   }
+
+   &:active {
+      height: 1.8em;
+      width: 2em;
+   }
+}
+
+// Menus
+ul {
+   padding: 0;
+   display: flex;
+}
+
+li {
+   list-style-type: none;
+   margin: 0;
+   flex-grow: 1;
+
+   a {
+      display: inline-block;
+      width: 100%;
+      height: 40px;
+      //   padding: 5px;
+      background-color: $cor2;
+      border-bottom: $cor4 solid 1px;
+      color: $cor4;
+      font-size: 1.2em;
+      text-decoration: none;
+      text-align: center;
+      padding-top: 8px;
+
+      &:hover {
+         background-color: $cor3;
+      }
+   }
+}
+nav {
+   margin-bottom: 4px;
+}
+// Principal
+section {
+   border: 1.3px solid $cor4;
+   height: 500px;
+   margin-bottom: 4px;
+}
+
+.s1 {
+   background-image: url('images/img1.jpg');
+   background-size: cover;
+   display: flex;
+   flex-direction: column;
+   justify-content: flex-start;
+}
+.info {
+   display: flex;
+   justify-content: center;
+   margin-top: 50px;
+}
+
+.informacoes {
+   width: 350px;
+   padding: 50px;
+   background-color: rgba(255, 255, 255, 0.452);
+   border-radius: 10%;
+   font-size: 20px;
+   font-weight: 600;
+   color: $cor4;
+}
+
+h2 {
+   color: $cor4;
+   background-color: $cor3;
+   padding: 5px;
+}
+
+.container {
+   display: flex;
+}
+
+.s2 {
+   background-color: $cor1;
+}
+
+.video {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 95%;
+}
+
+.s4 {
+   // background-color: $cor1;
+   height: 300px;
+}
+
+.s3 {
+   height: 550px;
+}
+
+#lista-eventos {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-around;
+   align-items: center;
+
+   h3 {
+      text-align: center;
+      margin-top: 10px;
+   }
+
+   div {
+      width: 300px;
+      margin-top: 10px;
+
+      div {
+         width: 300px;
+         height: 200px;
+
+         img {
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+         }
+      }
+   }
+}
+//form
+form {
+   display: flex;
+   height: 100%;
+   justify-content: space-around;
+   align-items: center;
+   div {
+      input[type='text'] {
+         width: 200px;
+      }
+
+      textarea {
+         width: 350px;
+         height: 180px;
+      }
+   }
+}
+
+//footer
+
+footer {
+   background-color: $cor1;
+   height: 100px;
+   display: flex;
+   justify-content: space-around;
+
+   div {
+      .redes {
+         width: 30px;
+         height: 30px;
+      }
+      .fb {
+         background-image: url('./images/facebook.png');
+         background-size: contain;
+      }
+      .tt {
+         background-image: url('./images/twitter.png');
+         background-size: contain;
+      }
+   }
+
+   p {
+      color: white;
+      margin-top: 5px;
+   }
+}
+
+.redessociais {
+   display: flex;
+   .redes {
+      margin: 15px;
+   }
+}
+
+.app {
+   // width: 200px;
+   // height: 50px;
+   .gp {
+      width: 100%;
+   }
+
+   .gp-img {
+      height: 50px;
+      width: 50px;
+      margin-left: 40px;
+      margin-top: 5px;
+   }
+}
+
+h4 {
+   color: $cor4;
+   margin-left: 15px;
+   margin-top: 15px;
+}

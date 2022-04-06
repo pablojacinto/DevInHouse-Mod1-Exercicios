@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+   <body>
+      <h3>Informe o ano atual</h3>
+
+      <input type="text" id="informaano" value="" />
+
+      <h3>Informe seu ano de nascimento</h3>
+
+      <input type="text" id="informanasc" value="" />
+      <br />
+      <br />
+      <button onclick="idade()">Calcule sua idade</button>
+
+      <p>Sua idade é: <span id="idadefim"></span> anos</p>
+
+      <script>
+         function idade() {
+            var x = document.getElementById('informaano').value;
+
+            var y = document.getElementById('informanasc').value;
+            document.getElementById('idadefim').innerHTML = x - y;
+         }
+      </script>
+   </body>
+</html>

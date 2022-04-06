@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Calculadora de Progressão Aritmética e Geométrica</title>
+   </head>
+   <body>
+      <h2>Selecione um valor inicial</h2>
+      <input type="text" id="v1" />
+      <h2>Selecione uma razão (qual valor deverá ser acrescido)</h2>
+      <input type="text" id="razao" />
+      <h2>
+         Selecione uma posição (quantas vezes esse valor será acrescido ao
+         número inicial)
+      </h2>
+      <input type="text" id="posicao" />
+      <h2>Escolha a operação</h2>
+      <button onclick="calcPA()">Progressão Aritmética</button>
+      <div
+         id="resultado"
+         style="
+            border: 1px solid red;
+            width: 200px;
+            height: auto;
+            margin-top: 10px;
+         "
+      >
+         Resultado
+      </div>
+
+      <script src="calcPAPG.js"></script>
+   </body>
+</html>
