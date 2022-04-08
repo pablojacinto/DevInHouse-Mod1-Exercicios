@@ -23,7 +23,7 @@
 const pesquisaCepAsync = async () => {
    //aqui tem que declarar o async
    let cep = document.getElementById('cep').value;
-   const url = `http://viacep.com.br/ws/${cep}/json/`;
+   const url = `https://viacep.com.br/ws/${cep}/json/`;
 
    const dados = await fetch(url); //pede pra aguardar o fetch ser resolvido
    const endereco = await dados.json(); //aqui usa o metodo json() para pegar só os dados do retorno do json
