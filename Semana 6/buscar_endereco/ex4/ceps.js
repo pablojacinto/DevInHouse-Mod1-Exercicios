@@ -20,22 +20,25 @@
 
 //a mesma coisa, mas com função assíncrona
 
+//função de completar endereço que vai ser chamada lá embaixo. Fiz ela por último, porque primeiro precisa armazenar o objeto json atraves do fetch
+function completarEndereco(endereco) {
+   document.getElementById('rua').textContent = endereco.logradouro; //poderia fazer a função com tudo isso externamente e só chamar a função. importante colocar o argumento na função - completarEndereço(endereco)
+   document.getElementById('bairro').textContent = endereco.bairro;
+
+   document.getElementById('cidade').textContent = endereco.localidade;
+}
+
 const pesquisaCepAsync = async () => {
    //aqui tem que declarar o async
    let cep = document.getElementById('cep').value;
    const url = `https://viacep.com.br/ws/${cep}/json/`;
-
-   const dados = await fetch(url); //pede pra aguardar o fetch ser resolvido
-   const endereco = await dados.json(); //aqui usa o metodo json() para pegar só os dados do retorno do json
-   //PERGUNTA como usar catch com async await?
-
-   if (typeof cep == undefined) {
-      alert('DEU ERRO');
+   if (cep.length < 8) {
+      alert('CEP INVÁLIDO');
    } else {
-      document.getElementById('rua').textContent = endereco.logradouro; //poderia fazer a função com tudo isso externamente e só chamar a função. importante colocar o argumento na função - completarEndereço(endereco)
-      document.getElementById('bairro').textContent = endereco.bairro;
-
-      document.getElementById('cidade').textContent = endereco.localidade;
+      const dados = await fetch(url); //pede pra aguardar o fetch ser resolvido
+      const endereco = await dados.json(); //aqui usa o metodo json() para pegar só os dados do retorno do json
+      //PERGUNTA como usar catch com async await?
+      completarEndereco(endereco); //chamando a função de completar endereço}
    }
 };
 
