@@ -41,3 +41,7 @@ export class ContentComponent implements OnInit {
 
   ngOnInit(): void {}
 }
+
+function alertar() {
+  alert('Esta bebida custa tantos reais');
+}

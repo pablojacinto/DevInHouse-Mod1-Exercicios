@@ -11,6 +11,7 @@ import { InformacoesComponent } from './components/informacoes/informacoes.compo
 
 //importando o roteamento//
 import { RouterModule } from '@angular/router';
+import { BebidasListaComponent } from './components/bebidas-lista/bebidas-lista.component';
 //////////////////////////
 @NgModule({
   declarations: [
@@ -21,14 +22,15 @@ import { RouterModule } from '@angular/router';
     HomeComponent,
     AboutComponent,
     InformacoesComponent,
+    BebidasListaComponent,
   ],
   imports: [
     BrowserModule,
 
     //importanto o routermodule - https://angular.io/guide/router-tutorial
     RouterModule.forRoot([
-      { path: 'about', component: AboutComponent },
       { path: '', component: HomeComponent },
+      { path: 'about', component: AboutComponent },
     ]),
   ],
   providers: [],

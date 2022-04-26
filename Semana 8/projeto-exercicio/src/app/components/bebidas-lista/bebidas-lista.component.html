@@ -1,6 +1,6 @@
-<div class="container">
+<div class="container mt-5">
   <div class="row">
-    <div *ngFor="let item of listaMenu" class="col">
+    <div *ngFor="let item of bebidasLista" class="col">
       <div class="container card" style="width: 18rem">
         <img
           src="{{ item.imagem }}"
@@ -11,9 +11,7 @@
         <div class="card-body">
           <h5 class="card-title">{{ item.titulo }}</h5>
           <p class="card-text">Acesse a receita do {{ item.titulo }}.</p>
-          <a href="{{ item.link }}" onclick="alertar()" class="btn btn-primary"
-            >Go somewhere</a
-          >
+          <a href="{{ item.link }}" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
     </div>
