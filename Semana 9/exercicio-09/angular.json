@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "projeto-exercicio": {
+    "exercicio-09": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -37,12 +37,12 @@
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "esp",
+      "prefix": "exc",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/projeto-exercicio",
+            "outputPath": "dist/exercicio-09",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -94,10 +94,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "projeto-exercicio:build:production"
+              "browserTarget": "exercicio-09:build:production"
             },
             "development": {
-              "browserTarget": "projeto-exercicio:build:development"
+              "browserTarget": "exercicio-09:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -105,7 +105,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "projeto-exercicio:build"
+            "browserTarget": "exercicio-09:build"
           }
         },
         "test": {
@@ -129,5 +129,5 @@
       }
     }
   },
-  "defaultProject": "projeto-exercicio"
+  "defaultProject": "exercicio-09"
 }
